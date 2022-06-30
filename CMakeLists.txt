@@ -25,5 +25,6 @@ add_library(luabind STATIC
 	${LUABIND_DETAIL_SRC}
 )
 
+target_compile_definitions(luabind PUBLIC LUABIND_NO_EXCEPTIONS)
 target_include_directories(luabind PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")
 target_link_libraries(luabind lua)
